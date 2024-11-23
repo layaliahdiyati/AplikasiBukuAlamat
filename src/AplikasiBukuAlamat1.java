@@ -20,6 +20,7 @@ int x=0;
      * Creates new form AplikasiBukuAlamat1
      */
     public AplikasiBukuAlamat1() {
+        setTitle("APLIKASI BUKU ALAMAT");
         initComponents();
         
         combojeniskelamin.setSelectedItem(null);
@@ -132,6 +133,11 @@ int x=0;
         Btnkeluar.setBackground(new java.awt.Color(255, 255, 153));
         Btnkeluar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         Btnkeluar.setText("Keluar");
+        Btnkeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnkeluarActionPerformed(evt);
+            }
+        });
 
         TabelData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -276,8 +282,12 @@ int x=0;
         TabelData.setValueAt("",TabelData.getSelectedRow(),1);
         TabelData.setValueAt("",TabelData.getSelectedRow(),2);
         TabelData.setValueAt("",TabelData.getSelectedRow(),3);
-        TabelData.setValueAt("",TabelData.getSelectedRow(),5);
+        TabelData.setValueAt("",TabelData.getSelectedRow(),4);
     }//GEN-LAST:event_BtnhapusActionPerformed
+
+    private void BtnkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnkeluarActionPerformed
+             dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_BtnkeluarActionPerformed
 
     /**
      * @param args the command line arguments
