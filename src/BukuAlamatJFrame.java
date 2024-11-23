@@ -128,7 +128,7 @@ public class BukuAlamatJFrame extends javax.swing.JFrame {
 
     private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
        if("admin".equals(textuser.getText())){
-           if("admin".equals(textpass.getText())){
+           if("12345".equals(textpass.getText())){
                
                AplikasiBukuAlamat1 formAgenda = new AplikasiBukuAlamat1();
                formAgenda.setVisible(true);
