@@ -51,7 +51,6 @@ int x=0;
         textemail = new javax.swing.JTextField();
         textalamat = new javax.swing.JTextField();
         Btntambah = new javax.swing.JButton();
-        Btnubah = new javax.swing.JButton();
         Btnhapus = new javax.swing.JButton();
         Btnkeluar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -74,7 +73,7 @@ int x=0;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(171, 171, 171))
+                .addGap(211, 211, 211))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,15 +108,6 @@ int x=0;
         Btntambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtntambahActionPerformed(evt);
-            }
-        });
-
-        Btnubah.setBackground(new java.awt.Color(255, 255, 153));
-        Btnubah.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        Btnubah.setText("Ubah");
-        Btnubah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnubahActionPerformed(evt);
             }
         });
 
@@ -186,13 +176,11 @@ int x=0;
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 772, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(Btntambah)
-                                .addGap(18, 18, 18)
-                                .addComponent(Btnubah)
-                                .addGap(18, 18, 18)
-                                .addComponent(Btnhapus)
-                                .addGap(18, 18, 18)
+                                .addGap(35, 35, 35)
                                 .addComponent(jButton1)
-                                .addGap(18, 18, 18)
+                                .addGap(37, 37, 37)
+                                .addComponent(Btnhapus)
+                                .addGap(38, 38, 38)
                                 .addComponent(Btnkeluar)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(62, 62, 62))
@@ -216,18 +204,17 @@ int x=0;
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textemail, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textalamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Btntambah)
-                    .addComponent(Btnubah)
+                    .addComponent(jButton1)
                     .addComponent(Btnhapus)
-                    .addComponent(Btnkeluar)
-                    .addComponent(jButton1))
-                .addGap(52, 52, 52)
+                    .addComponent(Btnkeluar))
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(96, 96, 96))
         );
@@ -259,14 +246,6 @@ int x=0;
           TabelData.setValueAt(textalamat.getText(),x,4);
           x=x+1;
     }//GEN-LAST:event_BtntambahActionPerformed
-
-    private void BtnubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnubahActionPerformed
-        textnama.setText("");
-        combojeniskelamin.setSelectedItem("");
-        textnohp.setText("");
-        textemail.setText("");
-        textalamat.setText("");
-    }//GEN-LAST:event_BtnubahActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         textnama.setText("");
@@ -328,7 +307,6 @@ int x=0;
     private javax.swing.JButton Btnhapus;
     private javax.swing.JButton Btnkeluar;
     private javax.swing.JButton Btntambah;
-    private javax.swing.JButton Btnubah;
     private javax.swing.JTable TabelData;
     private javax.swing.JComboBox<String> combojeniskelamin;
     private javax.swing.JButton jButton1;

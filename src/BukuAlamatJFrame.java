@@ -9,7 +9,12 @@
  * @author LENOVO
  */
 
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
 import javax.swing.JOptionPane;
 public class BukuAlamatJFrame extends javax.swing.JFrame {
 
@@ -19,6 +24,18 @@ public class BukuAlamatJFrame extends javax.swing.JFrame {
     
     public BukuAlamatJFrame() {
         initComponents();
+         Dimension screenSize=
+                Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension frameSize = this.getSize();
+        if (frameSize.height > screenSize.height) {
+            frameSize.height = screenSize.height;
+            }
+         if (frameSize.width > screenSize.width) {
+            frameSize.width = screenSize.width;
+         }
+         this.setLocation(
+         (screenSize.width - frameSize.width) / 2,
+         ( screenSize.height - frameSize.height) / 2);
     }
 
     /**
