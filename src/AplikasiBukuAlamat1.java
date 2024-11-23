@@ -114,6 +114,11 @@ int x=0;
         Btnubah.setBackground(new java.awt.Color(255, 255, 153));
         Btnubah.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         Btnubah.setText("Ubah");
+        Btnubah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnubahActionPerformed(evt);
+            }
+        });
 
         Btnhapus.setBackground(new java.awt.Color(255, 255, 153));
         Btnhapus.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -169,7 +174,7 @@ int x=0;
                                 .addComponent(Btnubah)
                                 .addGap(18, 18, 18)
                                 .addComponent(Btnhapus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButton1)
                                 .addGap(18, 18, 18)
                                 .addComponent(Btnkeluar)))
@@ -238,6 +243,14 @@ int x=0;
           TabelData.setValueAt(textalamat.getText(),x,4);
           x=x+1;
     }//GEN-LAST:event_BtntambahActionPerformed
+
+    private void BtnubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnubahActionPerformed
+        textnama.setText("");
+        combojeniskelamin.setSelectedItem("");
+        textnohp.setText("");
+        textemail.setText("");
+        textalamat.setText("");
+    }//GEN-LAST:event_BtnubahActionPerformed
 
     /**
      * @param args the command line arguments
