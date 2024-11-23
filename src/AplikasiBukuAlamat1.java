@@ -23,7 +23,21 @@ int x=0;
         setTitle("APLIKASI BUKU ALAMAT");
         initComponents();
         
+        
         combojeniskelamin.setSelectedItem(null);
+               Dimension screenSize=
+                Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension frameSize = this.getSize();
+        if (frameSize.height > screenSize.height) {
+            frameSize.height = screenSize.height;
+            }
+         if (frameSize.width > screenSize.width) {
+            frameSize.width = screenSize.width;
+         }
+         this.setLocation(
+         (screenSize.width - frameSize.width) / 2,
+         ( screenSize.height - frameSize.height) / 2);
+    
         
        
     }
@@ -79,8 +93,8 @@ int x=0;
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
