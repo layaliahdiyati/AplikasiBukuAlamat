@@ -8,11 +8,15 @@
  *
  * @author LENOVO
  */
+
+
+import javax.swing.JOptionPane;
 public class BukuAlamatJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form BukuAlamatJFrame
      */
+    
     public BukuAlamatJFrame() {
         initComponents();
     }
@@ -26,21 +30,121 @@ public class BukuAlamatJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        textuser = new javax.swing.JTextField();
+        textpass = new javax.swing.JTextField();
+        btnlogin = new javax.swing.JButton();
+        btnexit = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel1.setText("HALAMAN LOGIN");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setText("User");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setText("Password");
+
+        textpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textpassActionPerformed(evt);
+            }
+        });
+
+        btnlogin.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        btnlogin.setText("Login");
+        btnlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnloginActionPerformed(evt);
+            }
+        });
+
+        btnexit.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        btnexit.setText("Exit");
+        btnexit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnexitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnlogin)
+                        .addGap(26, 26, 26)
+                        .addComponent(btnexit))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(textuser)
+                        .addComponent(textpass, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)))
+                .addContainerGap(81, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnlogin)
+                    .addComponent(btnexit))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textpassActionPerformed
+
+    private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnexitActionPerformed
+
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+       if("admin".equals(textuser.getText())){
+           if("admin".equals(textpass.getText())){
+               
+               AplikasiBukuAlamat1 formAgenda = new AplikasiBukuAlamat1();
+               formAgenda.setVisible(true);
+               dispose();
+           }else{
+               JOptionPane.showMessageDialog(rootPane, "Password Salah", "Password Anda Salah", JOptionPane.ERROR_MESSAGE);
+           }
+       }else{
+           JOptionPane.showMessageDialog(rootPane, "Username Belum Terdaftar", "User Anda Salah", JOptionPane.ERROR_MESSAGE);
+       }
+                   
+               
+   
+           
+       
+    }//GEN-LAST:event_btnloginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +182,12 @@ public class BukuAlamatJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnexit;
+    private javax.swing.JButton btnlogin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField textpass;
+    private javax.swing.JTextField textuser;
     // End of variables declaration//GEN-END:variables
 }
