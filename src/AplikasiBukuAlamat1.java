@@ -123,6 +123,11 @@ int x=0;
         Btnhapus.setBackground(new java.awt.Color(255, 255, 153));
         Btnhapus.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         Btnhapus.setText("Hapus");
+        Btnhapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnhapusActionPerformed(evt);
+            }
+        });
 
         Btnkeluar.setBackground(new java.awt.Color(255, 255, 153));
         Btnkeluar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -144,6 +149,11 @@ int x=0;
         jButton1.setBackground(new java.awt.Color(255, 255, 153));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButton1.setText("Bersihkan");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -251,6 +261,23 @@ int x=0;
         textemail.setText("");
         textalamat.setText("");
     }//GEN-LAST:event_BtnubahActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        textnama.setText("");
+        combojeniskelamin.setSelectedItem("");
+        textnohp.setText("");
+        textemail.setText("");
+        textalamat.setText("");
+        textnama.requestFocus();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BtnhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnhapusActionPerformed
+        TabelData.setValueAt("",TabelData.getSelectedRow(),0);
+        TabelData.setValueAt("",TabelData.getSelectedRow(),1);
+        TabelData.setValueAt("",TabelData.getSelectedRow(),2);
+        TabelData.setValueAt("",TabelData.getSelectedRow(),3);
+        TabelData.setValueAt("",TabelData.getSelectedRow(),5);
+    }//GEN-LAST:event_BtnhapusActionPerformed
 
     /**
      * @param args the command line arguments
